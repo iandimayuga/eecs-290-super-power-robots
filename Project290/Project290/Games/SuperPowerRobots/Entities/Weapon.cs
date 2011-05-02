@@ -12,6 +12,7 @@ using Project290.Physics.Dynamics.Joints;
 using Project290.Physics.Common;
 using Project290.Physics.Common.PolygonManipulation;
 using Project290.Physics.Dynamics.Contacts;
+using Project290.Games.SuperPowerRobots.Controls;
 
 namespace Project290.Games.SuperPowerRobots.Entities
 {
@@ -196,6 +197,7 @@ namespace Project290.Games.SuperPowerRobots.Entities
         public void TakeDamage(float damage)
         {
             this.m_health -= damage;
+            if (!(this.m_owner.GetControl() is HumanAI))
             ScoreKeeper.AddScore((int)damage);
         }
 
