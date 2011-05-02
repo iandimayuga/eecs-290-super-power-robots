@@ -153,6 +153,17 @@ namespace Project290.Games.SuperPowerRobots
         {
             base.Draw();
             this.sprWorld.Draw();
+            Drawer.DrawString(
+                FontStatic.Get("defaultFont"),
+                "Level: " + (this.currentLevel + 1).ToString(),
+                new Vector2(875, 205),
+                Color.White,
+                0f,
+                Vector2.Zero,
+                0.4f,
+                SpriteEffects.None,
+                1f
+            );
         }
     }
 }

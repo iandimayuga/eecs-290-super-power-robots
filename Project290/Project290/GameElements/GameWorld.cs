@@ -228,6 +228,7 @@ namespace Project290.GameElements
             background.Draw();
 
             screens.Draw();
+
 #if DEBUG
             Drawer.Draw(
                 TextureStatic.Get("tileSafeCheck"),
