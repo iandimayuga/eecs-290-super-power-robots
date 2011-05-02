@@ -139,6 +139,17 @@ namespace Project290.Games.SuperPowerRobots.Entities
                     m_Weapons[i].Draw();
                 }
             }
+            float healthtemp = this.getHealth();
+            Drawer.DrawString(
+                FontStatic.Get("defaultFont"),
+                ("Bot Health: " + healthtemp.ToString()),
+                new Vector2(1450, 205),
+                Color.White,
+                0f,
+                Vector2.Zero,
+                0.4f,
+                SpriteEffects.None,
+                1f);
         }
     }
 }
