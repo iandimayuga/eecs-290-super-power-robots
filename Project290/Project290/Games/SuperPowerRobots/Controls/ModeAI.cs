@@ -75,15 +75,15 @@ namespace Project290.Games.SuperPowerRobots.Controls
                     }
                 }
 
-                if (!hasM)
+                if (!hasR)
                 {
-                    if (!hasR)
+                    if (!hasM)
                     {
                         m_Mode = Mode.DEFENSE;
                     }
-                    m_Mode = Mode.RANGED;
-                } else if (!hasR){
                     m_Mode = Mode.MELEE;
+                } else if (!hasM){
+                    m_Mode = Mode.RANGED;
                 } else if (m_ModeTimeout <= 0) {
                     m_Mode = (m_Mode == Mode.RANGED ? Mode.MELEE : Mode.RANGED);
                     m_ModeTimeout = new Random().Next(5) + 3;

@@ -39,7 +39,7 @@ namespace Project290.Games.SuperPowerRobots
         public LoadOutScreen(int scoreboardIndex, SPRGameScreen p)
             : base(scoreboardIndex)
         {
-            weapons = new string[4];
+            weapons = new string[5];
             count = 0;
             parentobj = p;
 
@@ -62,9 +62,9 @@ namespace Project290.Games.SuperPowerRobots
         }
         public void save(string weapon)
         {
-            weapons[count] = weapon;
+            weapons[count / 2] = weapon;
             count += 1;
-            if (count == 4)
+            if (count >= 8)
             {
                 // gtfo.
                 Dictionary<string, string> a = new Dictionary<string, string>();
@@ -97,7 +97,7 @@ namespace Project290.Games.SuperPowerRobots
                 Color.Black);
             Drawer.DrawString(
                 FontStatic.Get("defaultFont"),
-                "Please Select Your Weapon For Slot #" + count,
+                "Please Select Your Weapon For Slot #" + count / 2,
                 new Vector2(300, 100),
                 Color.White,
                 0f,

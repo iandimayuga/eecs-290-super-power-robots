@@ -142,8 +142,8 @@ namespace Project290.Games.SuperPowerRobots.Entities
             float healthtemp = this.getHealth();
             Drawer.DrawString(
                 FontStatic.Get("defaultFont"),
-                ("Bot Health: " + healthtemp.ToString()),
-                new Vector2(1450, 205),
+                ((this.IsPlayer() ? "Bot Health: " : "Enemy Health: ") + healthtemp.ToString()),
+                new Vector2(1350, (this.IsPlayer() ? 205 : 275)),
                 Color.White,
                 0f,
                 Vector2.Zero,
